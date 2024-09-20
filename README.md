@@ -1,25 +1,51 @@
+# **S&P 500 Stock Market Prediction**
+
+This repository contains two projects that aim to predict the S&P 500 stock prices using machine learning models. The projects utilize historical data spanning five years (2019-2024) and apply both **Linear Regression** and **Long Short-Term Memory (LSTM)** neural networks for stock market prediction.
+
+## **Table of Contents**
+
+1. [S&P 500 Stock Market Prediction - Using Linear Regression](#s&p-500-stock-market-prediction---using-linear-regression)
+   - [Project Overview (LR)](#project-overview-lr)
+   - [Dataset Information (LR)](#dataset-information-lr)
+   - [Exploratory Data Analysis (EDA) (LR)](#exploratory-data-analysis-eda-lr)
+   - [Model Development (LR)](#model-development-lr)
+   - [Results (LR)](#results-lr)
+   - [Financial Analysis (LR)](#financial-analysis-lr)
+   - [Conclusion (LR)](#conclusion-lr)
+   
+2. [S&P 500 Stock Market Prediction - Using Long Short-Term Memory (LSTM)](#s&p-500-stock-market-prediction---using-long-short-term-memory-lstm)
+   - [Project Overview (LSTM)](#project-overview-lstm)
+   - [Dataset Information (LSTM)](#dataset-information-lstm)
+   - [Model Architecture (LSTM)](#model-architecture-lstm)
+   - [Training Process (LSTM)](#training-process-lstm)
+   - [Model Evaluation Metrics (LSTM)](#model-evaluation-metrics-lstm)
+   - [Detailed Analysis of the Metrics (LSTM)](#detailed-analysis-of-the-metrics-lstm)
+   - [Predicted vs Actual Stock Prices Financial Implications (LSTM)](#predicted-vs-actual-stock-prices-financial-implications-lstm)
+   - [Conclusion (LSTM)](#conclusion-lstm)
+
+---
+
 # **S&P 500 Stock Market Prediction - Using Linear Regression**
 
 ## **Introduction**
 This project aims to analyze and predict the stock prices of the S&P 500 index using historical data spanning over five years. The dataset includes various attributes such as **Open**, **High**, **Low**, **Close** prices, and **Volume**, which are utilized to build a linear regression model. The goal is to predict the closing prices based on the historical trends of the other variables.
 
-## **Table of Contents**
-1. [Project Overview](#project-overview)
-2. [Dataset Information](#dataset-information)
-3. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-4. [Model Development](#model-development)
-5. [Results](#results)
-6. [Financial Analysis](#financial-analysis)
-7. [Conclusion](#conclusion)
+---
+
+## **Project Overview (LR)**
+
+This project leverages machine learning to predict the closing price of S&P 500 stocks using historical data from August 11, 2019, to August 9, 2024. A **Linear Regression** model is developed to predict future stock prices based on features like Open, High, Low prices, and Volume. The model is evaluated using metrics such as:
+
+- **Mean Squared Error (MSE)**
+- **Root Mean Squared Error (RMSE)**
+- **Mean Absolute Error (MAE)**
+- **R² score**
+
+These metrics assess the model's performance and predictability.
 
 ---
 
-## **Project Overview**
-This project leverages machine learning to predict the closing price of S&P 500 stocks using historical data from **August 11, 2019** to **August 9, 2024**. A **Linear Regression model** is developed to predict future stock prices based on features like **Open**, **High**, **Low** prices, and **Volume**. The model is then evaluated using metrics such as **Mean Squared Error (MSE)**, **Root Mean Squared Error (RMSE)**, **Mean Absolute Error (MAE)**, and **R² score** to assess its performance and predictability.
-
----
-
-## **Dataset Information**
+## **Dataset Information (LR)**
 The dataset comprises stock price data from 2019 to 2024. It is loaded into a **Pandas DataFrame** with the following key columns:
 - **Date**: The timestamp of the stock prices (renamed from "Time" to "Date" for clarity).
 - **Open**: Opening price of the S&P 500 index at the given time.
@@ -69,7 +95,7 @@ The **Exploratory Data Analysis (EDA)** provides a strong foundation for underst
 
 ---
 
-## **Model Development**
+## **Model Development (LR)**
 A **Linear Regression Model** was developed using the `sklearn` library. The following steps were followed to prepare and train the model:
 
 1. **Data Preparation**:
@@ -85,9 +111,7 @@ A **Linear Regression Model** was developed using the `sklearn` library. The fol
 4. **Predictions**:
    - The model made predictions on both the training and testing datasets.
 
----
-
-## **Results**
+## **Results (LR)**
 The model’s performance was evaluated using various metrics, which give insight into how well the model performs on the test data:
 
 - **Mean Squared Error (MSE)**: **1.3967** – Measures the average of the squares of the errors. Lower values indicate a better fit.
@@ -99,7 +123,7 @@ These metrics demonstrate that the model performs exceptionally well, with an **
 
 ---
 
-## **Financial Analysis**
+## **Financial Analysis (LR)**
 The extremely high **R² score (0.9999)** indicates that the linear regression model is very accurate in explaining the relationships between the input features (**Open**, **High**, **Low**, **Volume**) and the target (**Close**) prices. However, such accuracy should be interpreted carefully:
 
 ### **1. Financial Implication:**
@@ -111,25 +135,27 @@ The **RMSE** and **MAE** provide an idea of the deviation of the predictions fro
 ### **3. Overfitting Consideration:**
 The near-perfect **R² score** raises a red flag for overfitting. Although the model performs well on the test set, it may not generalize as well to unseen data. In finance, markets are influenced by many unpredictable factors, so over-reliance on historical patterns could lead to misleading predictions in the future.
 
+---
+
 ### **Overall Analysis:**
 This model could be useful in understanding trends and making predictions based on historical data but should be combined with other financial analysis methods for real-world decision-making.
 
----
-
-## **Conclusion**
+## **Conclusion (LR)**
 The **Linear Regression model** provides a basic approach to predict stock prices using historical S&P 500 data. While the model demonstrates high accuracy on the dataset, stock market prices are influenced by a vast range of factors. Thus, the model should not be used as a sole predictor for trading or investment decisions.
 
 ### **Future Improvements**:
 - Incorporating external variables such as **market indicators**, **financial news sentiment**, or more advanced models like **time series analysis** or **neural networks** for better predictions.
 
+---
+
 # **S&P 500 Stock Market Prediction - Using Long Short-Term Memory (LSTM)**
 
-## **Project Overview**
+## **Project Overview (LSTM)**
 This project aims to predict the **S&P 500 index's closing stock prices** using a **Long Short-Term Memory (LSTM)** model, a specialized type of recurrent neural network (RNN) that excels at learning from sequential data. The project utilizes **five years' worth of S&P 500 data**, split into training and testing sets. The goal is to evaluate how well the LSTM model can forecast **future stock prices**, specifically predicting the next **10 days** based on past performance.
 
 ---
 
-## **Dataset Information**
+## **Dataset Information (LSTM)**
 The dataset comprises **five years of stock prices**, including the following key columns:
 - **Date**: The specific timestamp of the stock price.
 - **Open**: Opening price of the S&P 500 index.
@@ -142,11 +168,11 @@ The data is preprocessed by extracting the 'Close' prices for modeling purposes.
 
 ---
 
-## **Model Architecture: Long Short-Term Memory (LSTM)**
+## **Model Architecture Long Short-Term Memory (LSTM)**
 
 The model is designed with **two layers of LSTM units**, each containing **50 units**. Additionally, **Dropout layers** are included to prevent overfitting, dropping 20-30% of units at random.
 
-### **Model Structure:**
+### **Model Structure (LSTM)**
 - **First LSTM layer**: 50 units, returns sequences for the next layer.
 - **Second LSTM layer**: 50 units, no return sequences.
 - **Dropout layers**: Applied after each LSTM layer to improve generalization.
@@ -156,12 +182,12 @@ The model is compiled using the **Adam optimizer** and the **mean squared error 
 
 ---
 
-## **Training Process**
+## **Training Process (LSTM)**
 The model is trained over **10 epochs** with a batch size of **64**, using the **MinMaxScaler** to scale data between 0 and 1 for efficient learning. Training loss was minimized over time, indicating the model's ability to learn and adjust predictions.
 
 ---
 
-## **Model Evaluation: Metrics**
+## **Model Evaluation Metrics (LSTM)**
 The model's performance was evaluated using four key metrics:
 - **Mean Squared Error (MSE)**
 - **Root Mean Squared Error (RMSE)**
@@ -228,7 +254,7 @@ R² measures how well the model explains the variance in the actual data.
 
 ---
 
-## **Predicted vs Actual Stock Prices: Financial Implications**
+## **Predicted vs Actual Stock Prices Financial Implications**
 The model's ability to predict future stock prices was tested by forecasting the next **10 days** based on past price trends. The small green line in the graph indicates these future predictions.
 
 ### **Future Prediction Analysis:**
@@ -254,7 +280,7 @@ The model's ability to predict future stock prices was tested by forecasting the
 
 ---
 
-## **Conclusion of the Model Evaluation**
+## **Conclusion (LSTM)**
 In conclusion, the **LSTM model** provides a powerful tool for predicting **long-term trends** in the S&P 500. It exhibits strong predictive power with an **R² of 0.970** and relatively low error margins. However, it faces challenges in fully anticipating market volatility and **sudden price changes**.
 
 For **long-term investors**, this model offers valuable insights into where the market may be headed. Short-term traders should approach these predictions with caution and combine them with more **granular analysis tools** for volatile conditions.
