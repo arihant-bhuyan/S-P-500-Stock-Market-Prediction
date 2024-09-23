@@ -172,6 +172,7 @@ The dataset comprises **five years of stock prices**, including the following ke
 - **Volume**: Total volume of stocks traded during the time frame.
 
 The data is preprocessed by extracting the 'Close' prices for modeling purposes.
+![image](https://github.com/user-attachments/assets/72954448-8d02-484e-9b72-b63b45342785)
 
 ---
 
@@ -184,6 +185,7 @@ The model is designed with **two layers of LSTM units**, each containing **50 un
 - **Second LSTM layer**: 50 units, no return sequences.
 - **Dropout layers**: Applied after each LSTM layer to improve generalization.
 - **Dense layer**: Final output layer for predicting the stock price.
+![image](https://github.com/user-attachments/assets/547dbe46-7774-4c1b-b7ca-e862c3a020af)
 
 The model is compiled using the **Adam optimizer** and the **mean squared error (MSE)** loss function, which is suitable for regression problems like stock price prediction.
 
@@ -191,6 +193,7 @@ The model is compiled using the **Adam optimizer** and the **mean squared error 
 
 ## **Training Process (LSTM)**
 The model is trained over **10 epochs** with a batch size of **64**, using the **MinMaxScaler** to scale data between 0 and 1 for efficient learning. Training loss was minimized over time, indicating the model's ability to learn and adjust predictions.
+![image](https://github.com/user-attachments/assets/09c5e120-e782-4cf6-ad60-654a48945997)
 
 ---
 
@@ -263,6 +266,8 @@ R² measures how well the model explains the variance in the actual data.
 
 ## **Predicted vs Actual Stock Prices Financial Implications**
 The model's ability to predict future stock prices was tested by forecasting the next **10 days** based on past price trends. The small green line in the graph indicates these future predictions.
+![image](https://github.com/user-attachments/assets/73ad3a8a-9eba-4df8-8a2d-51fb2133f58b)
+
 
 ### **Future Prediction Analysis:**
 1. **Trend Continuation**: The model forecasts a continuation of the upward trend, mirroring the historical price movements of the S&P 500.
