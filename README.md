@@ -66,9 +66,12 @@ By using the `describe()` function, we obtained summary statistics that provide 
 - The minimum value of **2463.50**, recorded in 2019, likely corresponds to a market dip, possibly associated with external factors like economic downturns or global events (e.g., the **COVID-19 pandemic**).
 - The maximum **Close** price of **5719.00** shows how much the index has grown over this time frame, reflecting an upward trend in the S&P 500.
 - The volume of trades varies widely, from very low numbers (1 trade) to extremely high numbers (**262,213** trades), indicating periods of both low and high liquidity in the market.
+![image](https://github.com/user-attachments/assets/9133d07e-00a7-49a3-8b7d-356a210b44bc)
+
 
 ### **2. Box Plot Analysis**
 We plotted box plots for the **Open**, **High**, **Low**, and **Close** prices to visualize the spread and identify outliers in the data. This analysis helps detect unusual data points that could potentially skew model predictions.
+![image](https://github.com/user-attachments/assets/2c994edf-c6d8-4e38-9d2c-879051498af5)
 
 #### **Observation:**
 - The box plots for all four price variables show a consistent range of prices with a slight increase in median prices over time.
@@ -81,6 +84,7 @@ We plotted box plots for the **Open**, **High**, **Low**, and **Close** prices t
 
 ### **3. Time Series Line Plot (Close Price)**
 We generated a time series plot to track the S&P 500's closing prices over the entire dataset period. The line chart shows the general trajectory of the index, capturing its fluctuations.
+![image](https://github.com/user-attachments/assets/638483a4-8cbd-4adb-8bc9-73aa02dee23d)
 
 #### **Observation:**
 - From **2019** to early **2020**, the market appears relatively stable, but there is a sharp drop in early **2020**, likely due to the **COVID-19 pandemic**.
@@ -104,12 +108,15 @@ A **Linear Regression Model** was developed using the `sklearn` library. The fol
 
 2. **Train-Test Split**:
    - The dataset was split into a training set (**70%**) and a test set (**30%**).
+   ![image](https://github.com/user-attachments/assets/6034ce93-336e-46cd-a157-aab6721abe7f)
 
 3. **Model Training**:
    - A **Linear Regression model** was created and trained on the training dataset.
+   ![image](https://github.com/user-attachments/assets/08e35557-22b1-4f3a-b88f-2ebc441c5fa2)
 
 4. **Predictions**:
    - The model made predictions on both the training and testing datasets.
+   ![image](https://github.com/user-attachments/assets/a4266a1d-9ee9-4c8b-9a43-e1a4a3eafa8c)
 
 ## **Results (LR)**
 The model’s performance was evaluated using various metrics, which give insight into how well the model performs on the test data:
